@@ -58,11 +58,11 @@ app.use(function (req, res, next) {
 // const routes = require("./routes/routes");
 
 
-// app.use("/app", routes)
+app.use("/app")
 
-// app.use("/", (req, res) => {
-//   res.redirect("/app/home")
-// });
+app.use("/", (req, res) => {
+  res.redirect("/app/home")
+});
 
 
 app.get("/",async(req,res)=>{
