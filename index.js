@@ -55,19 +55,17 @@ app.use(function (req, res, next) {
 // const Models = require('./database/models.js');
 
 
-// const routes = require("./routes/routes");
+const routes = require("./router");
 
 
-app.use("/app")
+app.use("/app", routes)
 
 app.use("/", (req, res) => {
-  res.redirect("/app/home")
+    res.redirect("/app/home")
 });
 
 
-app.get("/home",async(req,res)=>{
-    res.send("Hi");
-})
+
 
 
 
